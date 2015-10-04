@@ -41,9 +41,30 @@
             if(a){
                 var value = prompt("Enter the MAX value:");
                 method1(value);
-            }else{
-                //...
+            }else {
+                //document.write("<form>");
+                var txt = document.createElement("INPUT");
+                txt.setAttribute("type","number");
+                txt.setAttribute("name","txt");
+
+
+                var btn = document.createElement("Button");
+                var node = document.createTextNode("Try!");
+                btn.appendChild(node);
+
+
+                btn.addEventListener("click",function(){
+                    method1(txt.value);
+                });
+
+
+
+
+                document.body.appendChild(txt);
+                document.body.appendChild(btn);
+
             }
+
 
             function method1(number){
 
